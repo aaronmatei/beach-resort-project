@@ -9,24 +9,26 @@ import Navbar from './components/Navbar';
 import {RoomProvider} from './context'
 
 function App() {
-    return (<RoomProvider>
-        <Router>
-            <Navbar/>
-            <Switch>
+    return (
+        <RoomProvider>
+            <Router>
+                <Navbar/>
+                <Switch>
 
 
-                <Route exact path='/'
-                    component={Home}/>
-                <Route exact path='/rooms'
-                    component={Rooms}/>
-                <Route exact path='/rooms/:slug'
-                    component={SingleRoom}/>
-                <Route component={Error}/>
+                    <Route exact path='/'
+                        component={Home}/>
+                    <Route exact path='/rooms'
+                        component={Rooms}/>
+                    <Route exact path='/rooms/:slug'
+                        component={SingleRoom}/>
+                    <Route component={Error}/>
 
 
-            </Switch>
-        </Router>
-    </RoomProvider>);
+                </Switch>
+            </Router>
+        </RoomProvider>
+    );
 }
 
 export default App;
